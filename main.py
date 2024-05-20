@@ -1,6 +1,10 @@
 from bs4 import BeautifulSoup
+import urllib.request
 
-with open("./data/Nanoteknologi – Store norske leksikon.htm") as raw:
+# Link til artikeloversikt på snl
+link = urllib.request.Request("https://snl.no/.taxonomy/56")
+
+with urllib.request.urlopen(link) as raw:
     soup = BeautifulSoup(raw)
 
 articles = soup.find_all("a", class_ = 'link-list__link')
