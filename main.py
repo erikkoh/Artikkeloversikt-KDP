@@ -42,6 +42,7 @@ for i in range(0,len(article_links)):
 
 labels = "KDP", "SNL"
 sizes = [len(kdp_articles), len(non_kdp_artilces)]
+print(kdp_articles)
 
 fig, ax = plt.subplots()
 ax.pie(sizes, labels=labels, autopct='%1.1f%%')
