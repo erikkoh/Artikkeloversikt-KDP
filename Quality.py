@@ -21,7 +21,7 @@ article_names = [(x.string).lower() for x in articles]
 article_dic = {}
 
 
-# getting all articles
+#getting all articles
 article_links = [article.get("href") for article in articles]
 for i in range(0, len(article_names)):
     article_request = urllib.request.Request(article_links[i])
